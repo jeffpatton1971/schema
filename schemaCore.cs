@@ -8,14 +8,10 @@ using System.Collections.Generic;
 using System.IO;
 using System.Runtime.Serialization.Json;
 
-namespace schema.core
+namespace schema
 {
- public class core
- {
-   public object getSchema (string Path)
-   {
+    namespace core
+    {
 
-    return this;
-   }
- }
+    }
 }

@@ -8,24 +8,27 @@ using System.IO;
 using System.Runtime.Serialization.Json;
 using schema.core;
 
-namespace schema.module
+namespace schema
 {
- [Cmdlet(VerbsCommon.Get, "Schema")]
- public class GetSchema : PSCmdlet
- {
-  [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ParameterSetName = "File")]
-  public string Path { get; set; }
-  [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ParameterSetName = "Url")]
-  public string Uri { get; set; }
-  protected override void ProcessRecord()
-  {
-   switch (ParameterSetName)
-   {
-    case "File":
-     break;
-    case "Uri":
-     break;
-   }
-  }
- }
+    namespace module
+    {
+        [Cmdlet(VerbsCommon.Get, "Schema")]
+        public class GetSchema : PSCmdlet
+        {
+            [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ParameterSetName = "File")]
+            public string Path { get; set; }
+            [Parameter(Position = 0, Mandatory = true, ValueFromPipeline = true, ParameterSetName = "Url")]
+            public string Uri { get; set; }
+            protected override void ProcessRecord()
+            {
+                switch (ParameterSetName)
+                {
+                    case "File":
+                        break;
+                    case "Uri":
+                        break;
+                }
+            }
+        }
+    }
 }
